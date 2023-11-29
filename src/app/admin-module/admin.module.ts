@@ -5,6 +5,7 @@ import { AdminRouteModule } from './admin.route';
 import { ProductsComponent } from './pages/products/products.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { SharedModule } from './../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
          CategoriesComponent
     ],
     imports: [
+        SharedModule,
         AdminRouteModule,
         MatSidenavModule,
     ],
