@@ -1,0 +1,112 @@
+// Collection Variables for LYB App
+// !! Important
+
+// LearnYour Benefits
+$lyb-primary: #66cccc;
+$lyb-black: #231f20;
+
+// LearnYour Worklife
+$lywl-primary: #4392cf;
+
+// Vimeo
+$vimeo: #00adef;
+
+// Body Basic Colors
+//$body-background: #F8F8F8;
+
+$true-white: #fff;
+$true-black: #000;
+$white-smoke: #f5f5f5;
+$gray: #9c9c9c;
+$black: #2e2e2e;
+$new-active-bg:#D6DADC;
+$new-white:#e8eaeb;
+
+
+// Extra colors - override bootstrap variables
+$primary: #66cccc;
+$secondary: #6670cc;
+$success: #44bf60;
+$warning: #ff8a12;
+$danger: #ee3333;
+$info: #4abae2;
+$light: #e9ecef;
+$teal: #1db78a;
+$new-nav:#e8eaeb;
+
+// themes
+$footer-bg: #fdfdfd;
+
+// base color options - new colors
+$body-background: #f7f7f7;
+$dark-gray: lighten($black, 12%);
+$light-gray: lighten($black, 35%);
+$lighter-gray: lighten($black, 72%);
+$lightest-gray: lighten($black, 75%);
+
+// light theme
+$hover-bg: rgba($true-black, 0.0325);
+$active-bg: rgba($true-black, 0.0625);
+
+
+// global
+$breathing-space-bottom: 1rem;
+$breathing-space-top: 1rem;
+
+// components
+$toolbar-height: 4.375rem; // toolbar height (70px)
+$outlet-wrapper-padding: 4rem; // 2rem * 2 (top & bottom)
+$app-footer-height: 2.5rem; // footer height
+$component-section-header-height: 4.125rem; // 2.25rem + 1.875rem (1.5rem fontsize + 1.5 line height = 2.25rem (36px))
+$update-toolbar-height: 9.375rem; // toolbar height (70px)
+
+// card
+$card-padding: 1.25rem; // all sides
+$card-y-padding: 2.5rem; // 1.25rem * 2 (top & bottom)
+$card-x-padding: 2.5rem; // 1.25rem * 2 (left & right)
+
+$card-header-height: 2.5rem; // 1.5rem + 1rem (1rem fontsize + 1.5 line height = 1.5rem (24px))
+$card-header-xl-height: 2.875rem; // 1.875rem + 1rem (1.25rem fontsize + 1.5 line height = 1.875rem (30px))
+$card-section-header-height: $card-header-xl-height;
+$card-header-with-search-height: 2.75rem; // 2rem + .75rem fixed height 2rem + margin-bottom .75rem
+
+// min height for admin panel views
+$min-height-admin-views: 740px;
+$min-height-admin:440px;
+
+// sidenav
+$side-base-nav-width-sm: 4rem;
+$side-base-nav-width: 20rem;
+$side-nav-width-default: 20rem;
+
+$side-nav-header-height: $toolbar-height;
+$back-button-block-height: 4.75rem;
+$site-title-url-block-height: 92px;
+
+// flex-table
+$flex-table-th-height: 60px;
+$flex-table-td-height: 60px;
+
+// base-path
+$base-path: "/assets";
+
+// zIndex values
+
+$zIndex10: 9999;
+$zIndex9: 1100;
+$zIndex8: 1099;
+$zIndex7: 1050;
+$zIndex6: 1049;
+$zIndex5: 1000;
+$zIndex4: 100;
+$zIndex3: 10;
+$zIndex2: 9;
+$zIndex1: 1;
+$zIndex0: 0;
+$zIndexNegative: -1;
+
+$zIndexToast: $zIndex10;
+$zIndexSpinner: 1599;
+$zIndexTooltip: $zIndex9;
+$zIndexModal: $zIndex7;
+$zIndexNav: $zIndex6;
