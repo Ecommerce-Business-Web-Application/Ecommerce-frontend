@@ -6,6 +6,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './common/guards/auth.guard';
+import { LogoutComponent } from '../shared/logout/logout.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,6 @@ import { AuthGuard } from './common/guards/auth.guard';
         ],
       },
       { path: 'login', component: LoginComponent },
-
     //   {
     //     path: 'page/not-found',
     //     component: PageNotFoundComponent,

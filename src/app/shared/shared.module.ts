@@ -5,11 +5,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
     // Declare components, directives, and pipes here
-    NavbarComponent
+    NavbarComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NgbModule,
     NavbarComponent,
     RouterModule,
-    HttpClientModule
-  ]
+    HttpClientModule,
+    LogoutComponent
+  ],
+  providers: [AuthenticationService]
 })
 export class SharedModule { }

@@ -7,7 +7,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from './../shared/shared.module';
 import { LoginComponent } from './pages/login/login.component';
-import { AuthenticationService } from './common/services/authentication.service';
+import { AuthenticationService } from '../shared/services/authentication.service';
 
 @NgModule({
     declarations: [
@@ -15,7 +15,7 @@ import { AuthenticationService } from './common/services/authentication.service'
          DashboardComponent,
          ProductsComponent,
          CategoriesComponent,
-         LoginComponent
+         LoginComponent,
     ],
     imports: [
         SharedModule,
