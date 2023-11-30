@@ -25,7 +25,7 @@ export class AuthenticationService {
   isAuthenticated(): boolean {
     const token = this.getToken();
     if (token) {
-      // Here you can also add logic to check if the token is expired
+      
       return true;
     }
     return false;

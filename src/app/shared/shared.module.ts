@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'; // If you need forms
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { Router, RouterModule } from '@angular/router';
     FormsModule, // Other modules here
     NgbModule,
     RouterModule.forRoot([]),
+    HttpClientModule
   ],
   exports: [
     // Export the same components, directives, pipes, and imported modules
@@ -22,7 +24,8 @@ import { Router, RouterModule } from '@angular/router';
     FormsModule,
     NgbModule,
     NavbarComponent,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
