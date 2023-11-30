@@ -6,20 +6,23 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from './../shared/shared.module';
+import { LoginComponent } from './pages/login/login.component';
+import { AuthenticationService } from './common/services/authentication.service';
 
 @NgModule({
     declarations: [
          AdminModuleComponent,
          DashboardComponent,
          ProductsComponent,
-         CategoriesComponent
+         CategoriesComponent,
+         LoginComponent
     ],
     imports: [
         SharedModule,
         AdminRouteModule,
         MatSidenavModule,
     ],
-    providers: [],
+    providers: [AuthenticationService],
 })
 export class AdminModule {
 }

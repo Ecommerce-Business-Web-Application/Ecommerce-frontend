@@ -4,12 +4,15 @@ import { AdminModuleComponent } from './admin-module.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './common/guards/auth.guard';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
         path: 'manage',
+        canActivate: [AuthGuard],
         component: AdminModuleComponent,
         children: [
           {
@@ -28,11 +31,12 @@ import { CategoriesComponent } from './pages/categories/categories.component';
             path: '',
             redirectTo: 'dashboard',
             pathMatch: 'full'
-          }
-          
+          },
           
         ],
       },
+      { path: 'login', component: LoginComponent },
+
     //   {
     //     path: 'page/not-found',
     //     component: PageNotFoundComponent,
