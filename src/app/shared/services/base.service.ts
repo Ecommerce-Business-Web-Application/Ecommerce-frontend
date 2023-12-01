@@ -19,35 +19,14 @@ export abstract class BaseService {
     constructor(protected http: HttpClient) {
         this.generateResourceUrl();
     }
-
-    // Store the JWT token
-    storeToken(token: string): void {
-        localStorage.setItem('token', token);
-    }
-
-    // Check if the user is authenticated
-    isAuthenticated(): boolean {
-        const token = this.getToken();
-        if (token) {
-        
-        return true;
-        }
-        return false;
-    }
-
-    // Retrieve the JWT token
-    getToken(): string | null {
-        return localStorage.getItem('token');
-    }
-
-   
+    
     public getBaseApiUrl(): string {
         return this.environment.api
     }
 
     public getRawResourceString(): string {
-    return this.rawResourceString;
-  }
+        return this.rawResourceString;
+    }
 
     public setResourceName(resource?: string, params?: any) {
     if (!resource) {

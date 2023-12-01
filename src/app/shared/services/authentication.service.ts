@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { BaseService } from './base.service';
+import { User } from '../interfaces/login.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,14 +18,29 @@ export class AuthenticationService extends BaseService {
     this.resourceName =  'Account/login'
     this.setResourceName(this.resourceName)
   }
+
+  public storeToken(token: string): void {
+        localStorage.setItem('token', token);
+    }
  
-  public login(credentials: { username: string; password: string }): Observable<any> {
+  public login(credentials: User ): Observable<any> {
     return this.http.post(this.resourceBaseUrl, credentials);
   }
 
-   // Remove the JWT token
-    public logout(): void {
+  public logout(): void {
         localStorage.removeItem('token');
     }
 
+   public isAuthenticated(): boolean {
+        const token = this.getToken();
+        if (token) {
+        
+        return true;
+        }
+        return false;
+    }
+
+    public getToken(): string | null {
+        return localStorage.getItem('token');
+    }
 }
