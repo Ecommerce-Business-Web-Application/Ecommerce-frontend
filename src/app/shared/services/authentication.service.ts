@@ -2,42 +2,29 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
+export class AuthenticationService extends BaseService {
+  protected  resourceName: string;
+  protected  resourceBaseUrl: string;
 
-  private loginUrl = environment.api + 'Account/login'; // URL to your API
 
-  constructor(private http: HttpClient) {}
-
-  login(credentials: { Username: string; Password: string }): Observable<any> {
-    return this.http.post(this.loginUrl, credentials);
+  constructor( http: HttpClient) {
+    super(http);
+    this.resourceName =  'Account/login'
+    this.setResourceName(this.resourceName)
+  }
+ 
+  public login(credentials: { username: string; password: string }): Observable<any> {
+    return this.http.post(this.resourceBaseUrl, credentials);
   }
 
-  // Store the JWT token
-  storeToken(token: string): void {
-    localStorage.setItem('token', token);
-  }
-
-  // Check if the user is authenticated
-  isAuthenticated(): boolean {
-    const token = this.getToken();
-    if (token) {
-      
-      return true;
+   // Remove the JWT token
+    public logout(): void {
+        localStorage.removeItem('token');
     }
-    return false;
-  }
 
-  // Retrieve the JWT token
-  getToken(): string | null {
-    return localStorage.getItem('token');
-  }
-
-  // Remove the JWT token
-  logout(): void {
-    localStorage.removeItem('token');
-  }
 }
