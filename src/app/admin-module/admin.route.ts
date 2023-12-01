@@ -7,6 +7,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './common/guards/auth.guard';
 import { LogoutComponent } from '../shared/logout/logout.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { LogoutComponent } from '../shared/logout/logout.component';
         ],
       },
       { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
     //   {
     //     path: 'page/not-found',
     //     component: PageNotFoundComponent,

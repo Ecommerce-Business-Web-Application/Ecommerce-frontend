@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from './../shared/shared.module';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthenticationService } from '../shared/services/authentication.service';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { AuthenticationService } from '../shared/services/authentication.service
          ProductsComponent,
          CategoriesComponent,
          LoginComponent,
+         RegisterComponent,
     ],
     imports: [
         SharedModule,
