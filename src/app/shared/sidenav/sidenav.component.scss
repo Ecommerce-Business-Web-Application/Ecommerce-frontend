@@ -1,0 +1,29 @@
+ul {
+    width: 100%;
+}
+li{
+    width: 100%;
+    .light-color {
+        color: #d1cbcb;
+        }
+}
+li::after {
+    content: "";
+}
+li:hover {
+    .light-color {
+        color: #fff;
+        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::after {
+            content: "";
+            display: inline-block;
+            width: 10px;       /* Circle size */
+            height: 10px;      /* Circle size */
+            background-color: #fff; /* Circle color */
+            border-radius: 50%; /* Makes it round */
+            margin-left: 5px;  /* Space between the div and the circle */
+        }
+}

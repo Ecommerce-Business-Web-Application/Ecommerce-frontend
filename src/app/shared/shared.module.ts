@@ -3,17 +3,18 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // If you need forms
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
-import { Router, RouterModule } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {  RouterModule } from '@angular/router';
+import {  HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthenticationService } from './services/authentication.service';
-import { BaseService } from './services/base.service';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     // Declare components, directives, and pipes here
     NavbarComponent,
-    LogoutComponent
+    LogoutComponent,
+    SidenavComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +33,9 @@ import { BaseService } from './services/base.service';
     RouterModule,
     HttpClientModule,
     ReactiveFormsModule,
-    LogoutComponent
+    LogoutComponent,
+    SidenavComponent
+
   ],
   providers: [AuthenticationService]
 })
