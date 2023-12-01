@@ -7,13 +7,13 @@
               <span>Username</span>
           </label> 
               
-          <label>
+          <label class="mt-2">
               <input required="" formControlName="password" placeholder="" type="password" class="input"  autocomplete="disabled" >
               <span>Password</span>
           </label>
         
           <button class="submit mt-3" type="submit">Submit</button>
       </form>
-    <p class="signin mt-3">Don't have an acount ? <a href="#">SignUp</a> </p>
+    <p class="signin mt-3">Don't have an acount ? <a (click)="redirectToRegistration()" class="link" >SignUp</a> </p>
     </div>
 </div>

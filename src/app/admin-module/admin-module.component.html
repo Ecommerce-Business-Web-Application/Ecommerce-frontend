@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<app-navbar [nav]="'manish'">
+</app-navbar>
+<div class="row m-0">
+    <div class="col-md-2 p-0">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div class="col-md-8 p-3">
+        <router-outlet></router-outlet>
+    </div>  
+</div>

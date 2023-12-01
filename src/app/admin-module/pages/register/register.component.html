@@ -2,27 +2,29 @@
     <div class="form-container">
         <form class="form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
             <p class="title">Register</p>
-            <div class="d-flex justify-content-between">
+                    <label >
+                        <input required="" formControlName="username" type="text" class="input" autocomplete="disabled" >
+                        <span>Username</span>
+                    </label> 
+                    <label class="mt-2">
+                        <input required="" formControlName="email" type="text" class="input" autocomplete="disabled" >
+                        <span>Email</span>
+                    </label>   
+            <div class="form-row  mt-2">
+
                 <label>
-                    <input required="" formControlName="username" type="text" class="input mr-2" autocomplete="disabled" >
-                    <span>Username</span>
-                </label> 
+                    <input required="" formControlName="password" placeholder="" type="password" class="input"  autocomplete="disabled" >
+                    <span>Password</span>
+                </label>
                 <label>
-                    <input required="" formControlName="email" type="text" class="input" autocomplete="disabled" >
-                    <span>Email</span>
-                </label>   
-            </div>
-            <label>
-                <input required="" formControlName="password" placeholder="" type="password" class="input"  autocomplete="disabled" >
-                <span>Password</span>
-            </label>
-            <label>
-                <input required="" formControlName="confirmPassword" placeholder="" type="password" class="input"  autocomplete="disabled" >
-                <span>Confirm Password</span>
-            </label>
+                    <input required="" formControlName="confirmPassword" placeholder="" type="password" class="input"  autocomplete="disabled" >
+                    <span>Confirm Password</span>
+                </label>
+          </div>
+
             <button class="submit mt-3" type="submit">Submit</button>
         </form>
-      <!-- <p class="signin mt-3">Don't have an acount ? <a href="#">SignUp</a> </p> -->
+      <p class="signin mt-3">Already have an acount ? <a class="link" (click)="redirectToLogin()">Login</a> </p>
       </div>
   </div>
   
